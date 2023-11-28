@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XYZ - Update Your Availability Status</title>
+    <style>
+        .body {
+            font-family: sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .h1 {
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .button {
+            background-color: #007
+        }
+
+        .title {
+            font: Bold 28px Arial;
+            color: #212121
+        }
+        .subtitle {
+            font: Normal 16px Arial;
+            color: #444444
+        }
+        .note{
+            font: Bold 16px Arial;
+            color: #444444
+        }
+        .header-1 {
+            font: Bold 20px Arial;
+            color: #444444
+        }
+        .header-2 {
+            font: Bold 14px Arial;
+            color: #212121
+        }
+        .normal {
+            font: Normal 14px Arial;
+            color: #666666
+        }
+        .normal-2 {
+            font: Normal 14px Arial;
+            color: #444444
+        }
+        .error {
+            font: Bold 14px Arial;
+            color: #f86567
+        }
+        .hyperlink {
+            font: Bold 14px Arial;
+            color: #2E6EDF;
+            text-decoration: none
+        }
+        /* Frames */
+        .outer-frame {
+            margin: 0 auto;
+            width:100%;
+            max-width:600px;
+            background-color:#ffffff;
+            border:1px solid #eeeeee;
+            border-radius:4px
+        }
+        .inner-frame {
+            padding:40px 40px
+        }
+        /* Form */
+        .card-body {
+            border: 1px solid #cccccc;
+            border-radius:4px
+        }
+        .card-container {
+            cursor: pointer;
+            display: table;
+            margin: 13px
+        }
+        .card-radio-wrapper{
+            display: table-cell;
+            vertical-align: middle;
+            width: 52px
+        }
+        .card-content-wrapper {
+            display: table-cell;
+            vertical-align: middle
+        }
+        .option-container {
+            cursor: pointer;
+            display: table
+        }
+        .option-radio-wrapper {
+            display: table-cell;
+            vertical-align: middle;
+            width: 36px
+        }
+        .option-content-wrapper {
+            display: table-cell;
+            vertical-align: middle
+        }
+        .checkmark {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%
+        }
+        .submit-wrapper {
+            height: 48px;
+            position: relative;
+        }
+        .submit-button {
+            padding:14px 28px;
+            height: 48px;
+            border-radius:4px;
+            border: 0px;
+            background-color:#333333;
+            font: Bold 18px Arial;
+            color:#ffffff;
+            cursor: pointer;
+            position: absolute;
+            z-index: 1
+        }
+
+        .success-msg {
+            background: #f9fdfa;
+            width: 100%;
+            border-radius: 4px;
+            position: relative;
+            border-left: 4px solid #66cc80;
+            z-index: 2;
+            display: none;
+            padding: 2px;
+
+        }
+
+        .success-msg-container {
+            display: table;
+            margin: 10px 15px 10px 15px;
+        }
+
+        .success-msg-check {
+            display: table-cell;
+            vertical-align: middle;
+            width: 36px
+        }
+
+        .success-msg-text {
+            display: table-cell;
+            vertical-align: middle
+        }
+        .error-msg {
+            background: #fff9f9;
+            width: 100%;
+            border-radius: 4px;
+            border-left: 4px solid #f86567;
+            z-index: 2;
+            padding: 2px;
+            position: relative;
+            display: none;
+        }
+        .error-msg-container {
+            display: table;
+            margin: 8px 15px 8px 15px;
+        }
+        .error-msg-check {
+            display: table-cell;
+            vertical-align: middle;
+            width: 36px
+        }
+        .error-msg-text {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        /* Footer */
+        .footer {
+            border-top: 1px solid #EEEEEE;
+            padding: 32px 0px;
+            max-width:500px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            margin-top: 40px;
+        }
+        .footer-item {
+            width: 33%;
+            text-align:center
+        }
+        .footer-item > a {
+            white-space:nowrap;
+            font:Normal 12px/14px Arial;
+            color: #AAAAAA;
+            letter-spacing: 0;
+            text-decoration: none
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 24px;
+            color: #AAAAAA;
+            font: Normal 12px/20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-frame">
+        <div class="inner-frame">
+            <!-- Header -->
+            <div>
+                <span><img src="https://www.XYZ.com.pk/view/themes/XYZ/assets/images/logo.png" width="50px" height="50px" alt="XYZ_logo"></img><h2 style="margin-top:5px">XYZ</h2></span>
+                <div class="subtitle" style="margin-top:40px">Hi {Syed},</div>
+                <div class="subtitle" style="margin-top:40px">I hope you're keeping well.</div>
+                <div class="subtitle" style="margin-top:40px">I'm {Matching Engine} at {XYZ}. I noticed that you updated your availability {20 days} ago, just wanted to give you a heads up that this refreshes every 30 days.</div>
+                <div class="subtitle" style="margin-top:40px">But don't worry, just answer the questions below and I'll update your {XYZ} profile in my system the moment you click submit!</div>
+                <div class="subtitle" style="margin-top:40px"><span class="note">Please note:</span> This status update helps us know if you're currently seeking remote job opportunities with leading U.S. companies or not. We have been getting a lot of requirements of late, and I tend to give slight preference to candidates who update their profiles regularly.</div>
+            </div>
+            
+            <!-- Form -->
+            <form id="availability_update_form" method="get" action="https://developers.XYZ.com/pma/set-availability">
+                <input type="hidden" name="token" value="%token%">
+                <input type="hidden" name="show_thank_you" value="1">
+                <!-- Question 1 -->
+                <div>
+                    <div style="margin-top:48px"><span class="header-1">Are you actively looking for a remote job?</span></div>
+                    <div class="radio-group" style="margin-top:24px">
+                        <div class="card-body">
+                            <label class="card-container">
+                              <span class="card-radio-wrapper">
+                                 <input class="checkmark" type="radio" name="response" value="1" required>
+                              </span>
+                                <span class="card-content-wrapper">
+                                 <div>
+                                    <div>
+                                       <span style="vertical-align:middle"><img src="https://i.postimg.cc/RhWd6gnw/Group-4802-2x.png" width="26px" height="24px" alt="ready_to_interview"></span>
+                                       <span class="header-2">Ready to interview</span>
+                                    </div>
+                                    <div class="normal" style="margin-top:4px" >I am actively looking for a new remote software job. Mark me available to interview for the next 30 days.</div>
+                                 </div>
+                              </span>
+                            </label>
+                        </div>
+                        <div class="card-body" style="margin-top:8px">
+                            <label class="card-container">
+                              <span class="card-radio-wrapper">
+                                 <input class="checkmark" type="radio" name="response" value="2" required>
+                              </span>
+                                <span class="card-content-wrapper">
+                                 <div>
+                                    <div>
+                                       <span style="vertical-align:middle"><img src="https://i.postimg.cc/y84jxX6S/Group-4801-2x.png" width="26px" height="24px" alt="open_to_offers"></span>
+                                       <span class="header-2">Open to Offers</span>
+                                    </div>
+                                    <div class="normal" style="margin-top:4px" >I am not actively looking for a new remote software job, but I am available to hear about new job opportunities for the next 30 days.</div>
+                                 </div>
+                              </span>
+                            </label>
+                        </div>
+                        <div class="card-body" style="margin-top:8px">
+                            <label class="card-container">
+                              <span class="card-radio-wrapper">
+                                 <input class="checkmark" type="radio" name="response" value="3" required>
+                              </span>
+                                <span class="card-content-wrapper">
+                                 <div>
+                                    <div>
+                                       <span style="vertical-align:middle"><img src="https://i.postimg.cc/Pxxz9Sy0/Group-4803-2x.png" width="26px" height="24px" alt="unavailabe_for_jobs"></span>
+                                       <span class="header-2">Unavailable for Jobs</span>
+                                    </div>
+                                    <div class="normal" style="margin-top:4px" >I am not looking for a new remote software job at the moment.</div>
+                                 </div>
+                              </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div>
+                    <div style="margin-top:40px"><span class="header-1">Are you interested in full-time work (8hrs/day, 40hrs/week)?</span></div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper">
+                            <input class="checkmark" type="radio" name="availabilityStatusId" value="3" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">Yes</span>
+                        </label>
+                    </div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper">
+                            <input class="checkmark" type="radio" name="availabilityStatusId" value="2" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">No, only part-time</span>
+                        </label>
+                    </div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper">
+                            <input class="checkmark" type="radio" name="availabilityStatusId" value="6" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">I can start part-time immediately and then switch to full-time within a month</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div>
+                    <div style="margin-top:40px"><span class="header-1">If you get an offer, how soon can you start working with XYZ?</span></div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper">
+                            <input class="checkmark" type="radio" name="startsInWeeks" value="0" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">Immediately</span>
+                        </label>
+                    </div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper">
+                            <input class="checkmark" type="radio" name="startsInWeeks" value="1" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">In 1 week</span>
+                        </label>
+                    </div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper" style="margin-right:12px;">
+                            <input class="checkmark" type="radio" name="startsInWeeks" value="2" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">In 2 weeks</span>
+                        </label>
+                    </div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper">
+                            <input class="checkmark" type="radio" name="startsInWeeks" value="3" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">In 3 weeks</span>
+                        </label>
+                    </div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper" style="margin-right:12px;">
+                            <input class="checkmark" type="radio" name="startsInWeeks" value="4" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">In 1 month</span>
+                        </label>
+                    </div>
+                    <div style="margin-top:16px;">
+                        <label class="option-container">
+                        <span class="option-radio-wrapper">
+                            <input class="checkmark" type="radio" name="startsInWeeks" value="6" required>
+                        </span>
+                            <span class="option-content-wrapper normal-2">In more than 1 month</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="submit-wrapper" style="margin-top:48px">
+                    <input class="submit-button" type="submit" value="Submit"></input>
+                </div>
+
+                <div class="success-msg" id="success-msg" style="margin-top:20px">
+                    <div class="success-msg-container" >
+                        <span class="success-msg-check">
+                            <amp-img src="https://i.postimg.cc/J4HcMxgZ/check-circle-24px-4-2x.png" width="24px" height="24px" alt="Icon">
+                        </span>
+                        <span class="header-2 success-msg-text">Thanks! Your availability was updated successfully.</span>
+                    </div>
+                </div>
+                <!-- Try again message -->
+                <div class="error-msg" id="error-msg" style="margin-top:20px">
+                    <div class="error-msg-container">
+                        <span class="error-msg-check">
+                            <amp-img src="https://i.postimg.cc/QNzM59kJ/check-circle-24px-4-2x.png" width="24px" height="24px" alt="Icon">
+                        </span>
+                        <span class="error error-msg-text">Oops. Something went wrong. Please try again.</span>
+                    </div>
+                </div>
+
+            </form>
+
+
+            <!-- Extra Form Footer -->
+            <div>
+                <div class="subtitle" style="margin-top:40px">Once your Availability Status is updated, it will stay valid for the next 30 days and keep you a step closer to high-paying remote U.S. jobs.
+                </div>
+                
+                <div class="subtitle" style="margin-top:40px">P.S. This will reset in 30 days and you'll be required to update it again. But don't worry, I'll drop you a reminder for this.
+                </div>
+                
+                <div class="subtitle" style="margin-top:40px">
+                    <p>All the best,<br />
+                        Aime<br/>
+                        AI Matching Engine at XYZ</p>
+        
+                </div>
+                <!-- Plan b form -->
+                <div class="normal" style="margin-top:24px">Having trouble viewing or submitting this form? 
+                    <a class="hyperlink" href="https://develop=ers.XYZ.com/dashboard/home"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <table style="width: 100%;">
+            <tr>
+                <td class="footer-item">
+                    <a href="https://XYZ.com/privacy-policy/">Privacy Policy</a>
+                </td>
+                <td class="footer-item">
+                    <a href="https://mail.XYZ.com/pause">Pause Emails</a>
+                </td>
+                <td class="footer-item">
+                    <a href="https://XYZ.com/terms-of-service/" style="margin: 0">Terms of Service</a>
+                </td>
+            </tr>
+        </table>
+        <div class="footer-bottom">
+            Copyright 2021 XYZ Enterprises, Inc <br />1900 Embarcadero Road, Palo Alto, CA 94303
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for the DOM to be fully loaded
+    
+            document.getElementById('availability_update_form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+    
+                console.log("Submit button pressed")
+    
+                var formData = new FormData(this);
+    
+                formData.forEach(function(value, key) {
+                    console.log(`${key}: ${value}`);
+                });
+
+                document.getElementById('success-msg').style.display = 'block';
+                // document.getElementById('error-msg').style.display = 'block';
+    
+                // var xhr = new XMLHttpRequest();
+                // xhr.open('POST', '/receive_availability_update');
+                // xhr.onload = function() {
+                //     if (xhr.status === 200) {
+                //         document.getElementById('success-msg').style.display = 'block';
+                //     } else {
+                //         document.getElementById('error-msg').style.display = 'block';
+                //     }
+                // };
+                // xhr.send(formData);
+            });
+        });
+    </script>
+    
+</body>
+</html>
